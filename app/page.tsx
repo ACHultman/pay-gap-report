@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import WaitlistForm from './components/WaitlistForm';
 
 export const metadata: Metadata = {
   title: 'BC Pay Gap Report Generator — Free, No BCeID Required',
@@ -166,17 +167,7 @@ export default function Home() {
       <section className="bg-gray-900 py-16 text-center" id="waitlist">
         <h2 className="text-2xl font-bold text-white mb-2">Get notified when we launch.</h2>
         <p className="text-gray-400 mb-6">Launching July 2026 — before the November deadline rush.</p>
-        <div className="max-w-md mx-auto flex gap-2 px-6">
-          <input
-            type="email"
-            placeholder="you@company.ca"
-            className="flex-1 rounded-lg border border-gray-600 bg-gray-800 px-4 py-3 text-sm text-white placeholder-gray-500 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-          />
-          <button className="rounded-lg bg-indigo-500 px-6 py-3 text-sm font-semibold text-white hover:bg-indigo-400 transition-colors">
-            Notify me
-          </button>
-        </div>
-        <p className="mt-3 text-xs text-gray-500">One email when we launch. No spam.</p>
+        <WaitlistForm />
       </section>
 
       {/* Footer */}
